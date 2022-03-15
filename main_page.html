@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main_page_js.js"></script>
+    <link rel="stylesheet" type="text/css" href="main_page_style.css">
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<h1>ABC Winery Quality Rating System</h1>
+    <ul class="nav">
+        <li><a href="#qualityPred">Quality Predictor</a></li>
+        <li id="graph1Nav"><a href="#graph1">Quality Totals</a></li>
+        <li id="graph2Nav"><a href="#graph2">Alcohol to Quality Compare</a></li>
+        <li id="graph3Nav"><a href="#graph3">Correlation Heatmap</a></li>
+    </ul>
+<div id="qualityPred">
+    <div id="form">
+<form id="chemForm">
+    <label>Fixed Acidity</label>
+    <input id='fAcidity' type="number" step="any" value="7.4">
+    <br>
+    <label>Volatile Acidity</label>
+    <input id='vAcidity' type="number" step="any"  value="0.7">
+    <br>
+    <label>Citric Acid</label>
+    <input id='citAcid' type="number" step="any"  value="0.0">
+    <br>
+    <label>Residual Sugar</label>
+    <input id='resSugar' type="number" step="any"  value="1.9">
+    <br>
+    <label>Chlorides</label>
+    <input id='chlor' type="number" step="any"  value="0.076">
+    <br>
+    <label>Free Sulfur Dioxide</label>
+    <input id='fSulfurD' type="number" step="any"  value="11.0">
+    <br>
+    <label>Total Sulfur Dioxide</label>
+    <input id='tSulfurD' type="number" step="any"  value="34.0">
+    <br>
+    <label>Density</label>
+    <input id='density' type="number" step="any"  value="0.9978">
+    <br>
+    <label>pH</label>
+    <input id='pH' type="number" step="any"  value="3.51">
+    <br>
+    <label>Sulphates</label>
+    <input id='sulph' type="number" step="any" value="0.56">
+    <br>
+    <label>Alcohol</label>
+    <input id='alch' type="number" step="any"  value="9.4">
+    <br>
+    <button>Submit</button>
+</form>
+        </div>
+    <div id="results">
+        <p>Wine Rating:</p>
+        <div id="prediction"></div>
+        <img src="./images/wine_results.png" height="200" width="300">
+
+    </div>
+
+</div>
+<div id="graph1">
+    <p>The graph below lists a visual representation of the overall reception of the wines in the data. The data is
+        collected and then sorted. The sorting is dependent on each individual wines quality.
+    </p>
+
+</div>
+<div id="graph2">
+<p>The alcohol to quality correlation graph shows instances of alcohol values and their respective ratings. Alcohol,
+    based on the data, is determined to have the highest correlation to influencing the quality of a wine.
+</p>
+</div>
+<div id="graph3">
+    <p>
+        The heatmap displays how each of the individual chemicals in the wine impacts the overall quality of the wine.
+    </p>
+</div>
+
+</body>
+</html>
